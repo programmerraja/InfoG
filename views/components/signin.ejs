@@ -1,0 +1,42 @@
+<div class="user">
+  		<img src="/public/img/user.png" class="user-img">
+</div>
+
+	<div class="container">
+		<div class="form_container">
+
+				<% if((typeof link==="undefined")) {%>
+						<form class="form" action="/signin" method="post">
+
+                <%}else {%>
+						<form class="form" action="<%= link %>" method="post">
+                <%}%>
+				
+				<div class="name_container">
+					<label for="name">Email</label>
+					<input type="email" name="email" required="true">
+				</div>
+
+				<div class="password_container">		
+					<label for="password">Password</label>
+					<input type="password" name="password" required="true">
+				</div>
+				
+				
+
+				<div class="signin_container">
+					<input type="submit" name="login" value="SIgn In" class="signin">
+				</div>
+				<% if((typeof error_msg==="undefined")) {%>
+                	<div class="error_msg"><span></span></div>
+                <%}else {%>
+                	<div class="error_msg"><span><%= error_msg%></span></div>
+                <%}%>
+
+				<div class="form_text">
+	              <small style="margin:10px;"><a href="/user/forget/password"> Forget password?</a></small>
+	             <small>New to InfoG?<a href="/signup">Create an account</a></small>
+          		</div>  
+			</form>
+		</div>
+	</div>

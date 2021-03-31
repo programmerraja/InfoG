@@ -1,0 +1,150 @@
+:root{
+ --primary-color:white;
+ --secondary-color:#453cc9;
+}
+
+body
+{
+	margin: 0;
+	background-color:var(--primary-color); 
+	min-height: 100vh;
+	position: relative;
+}
+
+/*		NAVIGATION STYLE		*/
+.nav{
+	display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    margin: 0;
+    height: 50px;
+}
+.nav-brand
+{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+.nav-center
+{
+	margin: auto;
+}
+.nav_list{
+	display: flex;
+    margin-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo
+{
+	height: 30px;
+	width: 30px;	
+}
+.nav_link i
+{
+	font-size: 20px;
+}
+.nav_link a
+{
+	color: white;
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 5px;
+} 
+.nav_link a:hover
+{
+	border: 1px solid white;
+
+}
+
+.user_img{
+	height: 30px;
+	width: 30px;
+	margin-bottom:-10px;
+}
+.popup_container{
+	height: 100vh;
+    position: absolute;
+    background: #00000026;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.popup_card{
+	min-height: 200px;
+	padding: 10px;
+	width: 75%;
+    max-width: 280px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgb(255 255 255 / 5%) -1vmin -1vmin 1vmin, rgb(0 0 0 / 30%) 1vmin 1vmin 1vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popup_button{
+	background-color:var(--secondary-color);
+	color: white;
+	height: 30px;
+	width: 60px;
+	outline:none;
+	border-radius: 2px;
+	border: 1px solid var(--secondary-color);
+	cursor: pointer;
+}
+.popup_button:hover
+{
+	background-color: #453cc9ab;
+}
+/*FOOTER STYLE */
+.footer_container{
+	position: absolute;
+	width: 100%;
+}
+.footer_list
+{
+	display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.footer_item
+{
+	margin: 0 10px;
+	cursor: pointer;
+	padding:5px;
+	width: 35px;
+	border-radius: 10px; 
+	background-color: white;
+	text-align: center;	
+}
+.footer_item a
+{
+	color: black;
+}
+.footer_item:hover
+{
+	box-shadow: rgba(255, 255, 255, 0.05) -1vmin -1vmin 1vmin, rgba(0, 0, 0, 0.3) 1vmin 1vmin 1vmin;	
+}
+.copyright
+{
+	text-align: center;
+    background-color: var(--secondary-color);
+    color:white;
+    padding: 10px;
+    
+}
+/* media query for mobile phones */
+@media (max-width:500px)
+{
+.copyright {    
+    font-size: 13px;
+}
+
+}
+

@@ -1,0 +1,36 @@
+
+<div class="user">
+  		<img src="/public/img/user.png" class="user-img">
+</div>
+
+	<div class="container">
+		<div class="form__container">
+			<form class="form" action="/signup" method="post">
+				<div class="name__container">
+					<label for="name">Name</label>
+					<input type="text" name="name" required="true"  >
+				</div>
+				
+				<div class="email__container">
+					<label for="email">Email</label>
+                	<input name="email"  required="" type="email">
+				</div>
+
+				<div class="password__container">		
+					<label for="password">Password</label>
+					<input type="password" name="password" required="true" >
+				</div>
+				
+
+				<div class="signup__container">
+					<input type="submit" name="login" value="Sign Up" class="signup">
+				</div>
+
+				<% if((typeof error_msg==="undefined")) {%>
+                	<div class="error_msg"><span></span></div>
+                <%}else {%>
+                	<div class="error_msg"><span><%= error_msg%></span></div>
+                <%}%>
+			</form>
+		</div>
+	</div>
