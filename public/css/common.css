@@ -33,7 +33,7 @@ body
 }
 .nav_list{
 	display: flex;
-    margin-right: 24px;
+    margin-right: 13px;
     justify-content: space-between;
     align-items: center;
 }

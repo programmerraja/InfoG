@@ -69,6 +69,7 @@
 .section_title{
 	text-align: center;
 	text-transform: capitalize;
+	margin-top: 30px;
 }
 .section1_container,
 .section2_container
@@ -106,6 +107,7 @@
 
 .hero_text{
 	padding: 26px;
+	font-size: 16px;
 }
 .hero_img img
 {
@@ -122,9 +124,19 @@
     top: -59px;
 }
 .section2_container-text{
-	margin-right:0px;
-	margin-left:30px;
-
+	padding-right: 52px;
+    margin-right: 0px;
+    margin-left: 6px;
 }
-
+.section_title{
+	font-size: 16px;
+}
+.section_text{
+	font-size: 15px;
+}
+.section_img
+{
+	height: 200px;
+	width: 200px;
+}
 }
