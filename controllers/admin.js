@@ -8,7 +8,14 @@ const usermodel=require("../models/User");
 
 //handling GET /signin
 function get(req,res) {
+  //render this only if he not sigin as user
+  if(!req.user){
 		res.render("signin",{link:"/admin"});
+  }
+  else{
+    res.render("error");
+  }
+
 }
 
 //handling POST /signin
