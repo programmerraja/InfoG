@@ -28,7 +28,7 @@ async function get(req,res){
 		
 		//if he vistied as second we need to create new one 
 		if(scammer.isvisited){
-			await storeNewdata(scammer,ip,token,useragent,browser,os,device);
+			await storeNewdata(scammer,ip,token,useragent,browser,os,device,scammer.user_id,scammer.name);
 		}
 		else{
 		  	await updateOldData(scammer,ip,token,useragent,browser,os,device);
@@ -51,7 +51,7 @@ async function get(req,res){
 
 }
 
-async function storeNewdata(scammer,ip,token,useragent,browser,os,device){
+async function storeNewdata(scammer,ip,token,useragent,browser,os,device,user_id,name){
 
 	let data=await getLocation(ip);
 	if(data){
@@ -63,7 +63,9 @@ async function storeNewdata(scammer,ip,token,useragent,browser,os,device){
 										 city:city,org:org,
 										 device:device,os:os,
 										 browser:browser,
-										 visited_date:new Date()
+										 visited_date:new Date(),
+										 user_id:user_id,
+										 name:name
 										 });
 		 new_scammer.save().catch((err)=>{
    		  									logError(err);

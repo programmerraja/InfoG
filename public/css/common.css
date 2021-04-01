@@ -65,9 +65,9 @@ body
 	margin-bottom:-10px;
 }
 .popup_container{
-	height: 100vh;
-    position: absolute;
-    background: #00000026;
+	height: 100%;
+    position: fixed;
+    background:#00000082;
     width: 100vw;
     z-index: 1;
     display: none;

@@ -81,7 +81,6 @@ async function getScammer(req,res){
 		let _id=req.params.id;
 		var scammer=await scammermodel.findOne({_id:_id});
 		if(scammer){
-			console.log(typeof(scammer))
 			res.render("scammer",{scammer:scammer});
 			return
 		}
