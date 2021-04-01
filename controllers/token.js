@@ -62,7 +62,8 @@ async function storeNewdata(scammer,ip,token,useragent,browser,os,device){
 										 region:region,country:country,
 										 city:city,org:org,
 										 device:device,os:os,
-										 browser:browser
+										 browser:browser,
+										 visited_date:new Date()
 										 });
 		 new_scammer.save().catch((err)=>{
    		  									logError(err);
@@ -83,7 +84,8 @@ async function updateOldData(scammer,ip,token,useragent,browser,os,device){
 												 region:region,country:country,
 												 city:city,org:org,
 												 device:device,os:os,
-												 browser:browser
+												 browser:browser,
+										 		visited_date:new Date()
 												 }
 												);
 		}}
