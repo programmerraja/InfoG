@@ -1,8 +1,7 @@
 .title{
 	text-align: center;
 }
-.scammer_container
-{
+.scammer_container{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -13,24 +12,20 @@
 	padding: 10px;
 }
 .left,
-.right
-{
+.right{
 	min-width: 154px;
 }
-.bold_text
-{
+.bold_text{
 	font-weight: bold;
 }
-.data_left
-{
+.data_left{
 	margin-right: 15px;
 	width:100px;
 }
 .scammer_container a{
 	color: white;
 }
-.scammer_data
-{
+.scammer_data{
 	display: flex;
 }
 .remove_container{
@@ -41,7 +36,6 @@
 
 .remove_button{
 	color: white;
-
 	position: relative;
 	font-weight: bold;
 	border-radius: 5px;
@@ -61,9 +55,15 @@
 /* media query for mobile phones */
 @media (max-width:500px)
 {
+
 .left,
 .right{
-	min-width: 240px;
+	width: 100%;
+}
+
+.scammer_container
+{
+	padding: 10px 23px;
 }
 
 }
