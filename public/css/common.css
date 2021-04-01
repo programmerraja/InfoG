@@ -191,7 +191,6 @@ body
     transform: translateY(0px);
 }
 .nav_link{
-	border-bottom: 1px solid;
     padding-bottom: 10px;
     width: 100%;
     text-align: center;

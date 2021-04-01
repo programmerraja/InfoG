@@ -11,6 +11,7 @@
     border-radius: 7px;
 }
 .info_text{
+	display: none;
 	text-align: center;
 	color: gray;
 }
@@ -208,7 +209,43 @@ border-radius: 7px;
 	display: flex;
 	justify-content: center;
 }
+/*	Loading animation  */
+.loading_container
+{
+	display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;    
+}
+.dot{
+  width: 18px;
+  height: 18px;
+  background: var(--secondary-color);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bounce 1.4s infinite ease-in-out both;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+.dot1{
+    -webkit-animation-delay: -0.32s;
+ 	animation-delay: -0.32s;
+}
+.dot2 {
+	-webkit-animation-delay: -0.16s;
+  	animation-delay: -0.16s; 
+}
+@keyframes bounce {
+  0%, 80%, 100% { 
+  	-webkit-transform: scale(0); 
+  	transform: scale(0); 
 
+  }
+  40% {
+   -webkit-transform: scale(1.0);
+  	 transform: scale(1.0);
+
+    }
+}
 .footer_container{
 	 position: relative;
     bottom: -159px;

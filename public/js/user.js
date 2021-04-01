@@ -1,7 +1,10 @@
 var popup_container=document.querySelector(".popup_container");
+var loading_container=document.querySelector(".loading_container");
+
 
 async function getLink()
 	{
+
 		let scammername=document.querySelector(".scammername").value;
 
 		let redirect_link=document.querySelector(".img_link").value;
@@ -44,6 +47,7 @@ async function getLink()
 
 	async function fetchVictim()
 	{
+		loading_container.style.display="flex";
 		var table = document.querySelector(".table");
 		var info_text=document.querySelector(".info_text");
 		var children=table.children;
@@ -63,6 +67,7 @@ async function getLink()
 			{
 				table.style.display="flex";
 				info_text.style.display="none";
+				loading_container.style.display="none";	
 				res["scammerdata"].forEach((scammer)=>
 				{
 					var user_id=scammer["_id"];
@@ -90,16 +95,19 @@ async function getLink()
 					var browser=scammer["browser"]?scammer["browser"]:"Not Known";
 					var isvisited=scammer["isvisited"];
 					insertToTable({user_id,scammername,ip,city,region,country,org,vendor,model,type,isvisited,link},table);
-					
-
-
 				});	
-			}}	
+			}
+			else{
+				info_text.style.display="block";
+			}
+		}	
 		}
 		else{
 			popup_container.style.display="flex";
 			popup_container.children[0].children[0].innerText=res.error_msg;
 		}
+		loading_container.style.display="none";	
+
 	}
 
  function copyLink()
