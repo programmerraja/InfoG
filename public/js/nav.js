@@ -12,6 +12,5 @@ function toggleNav() {
 			closebutton.classList.toggle("crosslines_show");
 			togglebutton.classList.toggle("lines_hide");
 		}
-		// body...
 	}
 toggleNav();

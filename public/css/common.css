@@ -1,6 +1,6 @@
 :root{
  --primary-color:white;
- --secondary-color:#453cc9;
+ --secondary-color:#EB144C;
 }
 
 body
@@ -64,6 +64,7 @@ body
 	width: 30px;
 	margin-bottom:-10px;
 }
+/*	POPUP */
 .popup_container{
 	height: 100%;
     position: fixed;
@@ -142,7 +143,7 @@ body
 /* media query for mobile phones */
 @media (max-width:500px)
 {
-
+/*	NAVIGATION */
 .crosslines{
 	position: absolute;
 	right: 10px;

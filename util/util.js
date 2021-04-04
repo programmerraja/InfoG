@@ -6,7 +6,7 @@ function generateToken(){
 	return token;
 }
 
-async function sendMail(subject,body,to_mail)
+function sendMail(subject,body,to_mail)
 {
 	 return new Promise((resolve,reject)=>{
 			var transporter = nodemailer.createTransport({

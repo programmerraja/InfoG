@@ -57,7 +57,7 @@ async function getLink()
 				children[1].remove();
 			}
 		}
-		
+		try{
 		let res=await fetch("/api/get");
 		res=await res.json();
 		if(res.status=="Sucess")

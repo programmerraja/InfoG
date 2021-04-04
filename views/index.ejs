@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>InfoG</title>
-	 <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
-	 <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-	 <link rel="stylesheet" type="text/css" href="/public/css/common.css">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-</head>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/common.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
+
 <body>
-	
-  	<!-- ############# NAVIGATION #######################-->
-	           <%- include('components/nav.ejs');  -%>
-
-	<!-- ############# HERO #######################-->
-             <%- include('components/hero.ejs');  -%>
-  	<!-- ################# Section -1 ############# -->
-             <%- include('components/section.ejs');  -%>
-
-    <!-- ################# FOOTER ############# -->
-             <%- include('components/footer.ejs');  -%>
-
-  	
+	<!-- ############# NAVIGATION #######################-->
+	<%- include('components/nav.ejs');  -%>
+		<!-- ############# HERO #######################-->
+		<%- include('components/hero.ejs');  -%>
+			<!-- ################# Section -1 ############# -->
+			<%- include('components/section.ejs');  -%>
+				<!-- ################# FOOTER ############# -->
+				<%- include('components/footer.ejs');  -%>
 </body>
-<script src="/public/js/nav.js"></script>  
+<script src="/public/js/nav.js"></script>
 
 </html>
