@@ -18,9 +18,11 @@ A information Gathering tool
     cd InfoG
 </prev>
 <prev>
+   
     npm install 
 </prev>
 <prev>
+   
     node index.js
 </prev>
  <p>Open your browser and type the localhost:3000 to see the website</p>
