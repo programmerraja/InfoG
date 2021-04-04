@@ -1,10 +1,5 @@
 # InfoG
 A information Gathering tool
-# Weather-App
-A weather app build using  a React Js 
-
-# Why i build this app ?
-  <p> I recently learn react js so test my knowledge and to develope some cool thing from my leaning </p>
 
 # Motivation
    <p>
