@@ -63,8 +63,8 @@ async function getLink()
 		if(res.status=="Sucess")
 		{
 			if(res["scammerdata"]){
-			if(res["scammerdata"].length>0)
-			{
+			  if(res["scammerdata"].length>0)
+			  {
 				table.style.display="flex";
 				info_text.style.display="none";
 				loading_container.style.display="none";	
@@ -97,16 +97,21 @@ async function getLink()
 					insertToTable({user_id,scammername,ip,city,region,country,org,vendor,model,type,isvisited,link},table);
 				});	
 			}
+			}
 			else{
 				info_text.style.display="block";
 			}
 		}	
-		}
 		else{
 			popup_container.style.display="flex";
 			popup_container.children[0].children[0].innerText=res.error_msg;
 		}
 		loading_container.style.display="none";	
+		}
+		catch(e){
+			popup_container.style.display="flex";
+			popup_container.children[0].children[0].innerText=e.message;
+		}
 
 	}
 
