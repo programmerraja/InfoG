@@ -97,11 +97,10 @@ async function getLink()
 					insertToTable({user_id,scammername,ip,city,region,country,org,vendor,model,type,isvisited,link},table);
 				});	
 			}
-			}
 			else{
 				info_text.style.display="block";
 			}
-		}	
+		}}	
 		else{
 			popup_container.style.display="flex";
 			popup_container.children[0].children[0].innerText=res.error_msg;
