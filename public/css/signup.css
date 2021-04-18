@@ -1,83 +1,83 @@
-.user
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 65px;
-}
-.user-img
-{
-	width: 35px;
-	height:35px;
-}
-.container
-{
-    display: flex;
-    justify-content: center;
-    width: auto;
-}
-.form__container
-{
-	background-color: #f6f8fa;
-	width: 300px;
-	height: auto;
-	border: 1px solid white;
-	border-radius: 10px;
-	box-shadow:2px 1px 3px 3px grey;
-}
-.form
-{
-	margin: 50px 0px
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
 }
 
-label
-{
-	font-size: 20px;
+.user-img {
+  width: 35px;
+  height: 35px;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.form__container {
+  background-color: #f6f8fa;
+  width: 300px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 1px 3px 3px grey;
+}
+
+.form {
+  margin: 50px 0px
+}
+
+label {
+  font-size: 20px;
+}
+
 .name__container,
 .email__container,
 .password__container,
 .signup__container,
-.form__text
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+.form__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
-.signup__container
-{
-	margin: 18px 10px;
-	width: 90%;
+
+.signup__container {
+  margin: 18px 10px;
+  width: 90%;
 }
-.signup__container input
-{
-	cursor: pointer;
-	background-color:var(--secondary-color);
-	color: white;
-	height: 35px;
+
+.signup__container input {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+  height: 35px;
 }
-input
-{
-	background-color: rgb(232,240,254);
-	border-radius: 5px;
-    border: 2px;
-    height: 30px;
-    width: 90%;
-    outline: none;
-    font-size: 16px;
+
+input {
+  background-color: rgb(232, 240, 254);
+  border-radius: 5px;
+  border: 2px;
+  height: 30px;
+  width: 90%;
+  outline: none;
+  font-size: 16px;
 }
-.signup:hover
-{
-	background-color: #453cc9ab;;
+
+.signup:hover {
+  background-color: #453cc9ab;
+  ;
 }
-.error_msg
-{
-    text-align: center;
-    color: red;
-    margin: 10px;
-    word-break: break-word;
+
+.error_msg {
+  text-align: center;
+  color: red;
+  margin: 10px;
+  word-break: break-word;
 }
+
 .footer_container {
-    position: relative;
-    bottom: -159px;
+  position: relative;
+  bottom: -159px;

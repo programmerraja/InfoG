@@ -7,48 +7,48 @@ const LocalStrategy = require("passport-local").Strategy;
 const User = require("../models/User");
 //utill
 const {
-    AppError,
-    logError
+  AppError,
+  logError
 } = require("../util/util");
 
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+  done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => {
-        done(err, user);
-    });
+  User.findById(id, (err, user) => {
+    done(err, user);
+  });
 });
 
 // Local Strategy
 passport.use(new LocalStrategy({
-    usernameField: "email"
+  usernameField: "email"
 }, AuthUser));
 
 async function AuthUser(email, password, done) {
-    // Match User
-    try {
-        let user = await User.findOne({
-            email: email
+  // Match User
+  try {
+    let user = await User.findOne({
+      email: email
+    });
+    if (user) {
+      let hash = user.password;
+      if (bcrypt.compareSync(password, hash)) {
+        return done(null, user);
+      } else {
+        return done(null, false, {
+          message: "Password does not match"
         });
-        if (user) {
-            let hash = user.password;
-            if (bcrypt.compareSync(password, hash)) {
-                return done(null, user);
-            } else {
-                return done(null, false, {
-                    message: "Password does not match"
-                });
-            }
-        } else {
-            return done(null, false, {
-                message: "No user exit with this email"
-            });
-        }
-    } catch (err) {
-        logError(err);
-        return done(new AppError(err, 500));
+      }
+    } else {
+      return done(null, false, {
+        message: "No user exit with this email"
+      });
     }
+  } catch (err) {
+    logError(err);
+    return done(new AppError(err, 500));
+  }
 }
 module.exports = passport;

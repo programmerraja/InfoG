@@ -1,10 +1,10 @@
 function adminAuthHandler(req, res, next) {
-    console.log(req.user)
-    if (req.user && req.user.is_admin) {
-        next()
-    } else {
-        res.redirect("/");
-    }
+  console.log(req.user)
+  if (req.user && req.user.is_admin) {
+    next()
+  } else {
+    res.redirect("/");
+  }
 
 }
 

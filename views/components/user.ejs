@@ -1,30 +1,28 @@
 <div class="hero">
-  	<img src="/public/img/user_link.png" class="hero-img">
+  <img src="/public/img/user_link.png" class="hero-img">
+</div>
+
+<!-- FORM 1  -->
+<div class="form">
+  <div class="copy_text">copied</div>
+  <input type="text" name="scammername" class="scammername" placeholder="Enter the scammer name" required="true">
+
+  <input type="text" name="link" class="img_link" placeholder="Enter any url or image url">
+
+  <img src="/public/img/copy.png" class="copy-img">
+  <img src="/public/img/links.png" class="link-img">
+  <input type="text" name="link" class="link" placeholder="Link">
+  <input type="button" name="getlink" class="getlink margin" value="Get Link" readonly="true">
+</div>
+
+
+<h1 class="title">Scammer's</h1>
+<h3 class="info_text">No Scammer Avalible</h3>
+<!-- ################# LOADING ############# -->
+<%- include('./loading.ejs');  -%>
+<div class="table">
+  <div class="tr table_head">
+    <div class="th">Name</div>
+    <div class="th">Is Visited</div>
   </div>
-
-  <!-- FORM 1  -->
-  <div class="form">
-    <div class="copy_text">copied</div>
-  	<input type="text" name="scammername" class="scammername" placeholder="Enter the scammer name" required="true">
-
-     <input type="text" name="link" class="img_link" placeholder="Enter any url or image url">
-
-  	<img src="/public/img/copy.png"  class="copy-img">
-  	<img src="/public/img/links.png"  class="link-img">
-  	<input type="text" name="link" class="link" placeholder="Link">
-  	<input type="button" name="getlink" class="getlink margin" value="Get Link" readonly="true">	
-  </div>
-
-
-  <h1 class="title">Scammer's</h1>
-  <h3 class="info_text">No Scammer Avalible</h3>
-  <!-- ################# LOADING ############# -->
-    <%- include('./loading.ejs');  -%>
-  <div class="table">
-  	<div class="tr table_head">
-	  	<div class="th">Name</div>
-	  	<div class="th">Is Visited</div>
-  	</div>
-  </div>
-
-  
+</div>

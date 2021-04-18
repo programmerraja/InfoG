@@ -1,143 +1,145 @@
 <h3 class="title"> Scammer Information</h3>
 <div class="scammer_container">
 
-		
-	<div class="left">
-		<div class="scammer_data">
-			<div class="data_left">
-					<p class="bold_text" >Name:</p  >
-			</div>
 
-			<div class="data_right">
-				<p><%= scammer.name?scammer.name:"Not Known" %></p>
-			</div>
-		</div>
+  <div class="left">
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Name:</p>
+      </div>
 
-		<div class="scammer_data">
-			<div class="data_left">
-					<p  class="bold_text" >Ip:</p>
-			</div>
+      <div class="data_right">
+        <p><%= scammer.name?scammer.name:"Not Known" %></p>
+      </div>
+    </div>
 
-			<div class="data_right">
-				<p><%= scammer.ip?scammer.ip:"Not Known" %> </p>
-			</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Ip:</p>
+      </div>
 
-		</div>
+      <div class="data_right">
+        <p><%= scammer.ip?scammer.ip:"Not Known" %> </p>
+      </div>
 
-		<div class="scammer_data">
-			<div class="data_left">
-				<p class="bold_text">City:</p>
-			</div>
-			<div class="data_right">
-				<p><%= scammer.city?scammer.city:"Not Known" %> </p>
-			</div>
-		</div>
+    </div>
 
-		<div class="scammer_data">
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">City:</p>
+      </div>
+      <div class="data_right">
+        <p><%= scammer.city?scammer.city:"Not Known" %> </p>
+      </div>
+    </div>
 
-			<div class="data_left">
-				<p class="bold_text" >Region:</p>
-			</div>
-			<div class="data_right">
-				<p><%= scammer.region?scammer.region:"Not Known" %> </p>
-			</div>
-		</div>
+    <div class="scammer_data">
 
-		<div class="scammer_data">
-			<div class="data_left">
-				<p  class="bold_text" >Country:</p  >
-			</div>
-			<div class="data_right">
-				<p><%= scammer.country?scammer.country:"Not Known" %> </p>
-			</div>
-		</div>
-		<div class="scammer_data">
-			<div class="data_left">
-					<p  class="bold_text" >Organisation:</p>
-			</div>
+      <div class="data_left">
+        <p class="bold_text">Region:</p>
+      </div>
+      <div class="data_right">
+        <p><%= scammer.region?scammer.region:"Not Known" %> </p>
+      </div>
+    </div>
 
-			<div class="data_right">
-				<p><%= scammer.org?scammer.org:"Not Known" %> </p>
-			</div>
-		</div>
-		<div class="scammer_data">
-			<div class="data_left">
-					<p  class="bold_text" >Visited Date:</p>
-			</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Country:</p>
+      </div>
+      <div class="data_right">
+        <p><%= scammer.country?scammer.country:"Not Known" %> </p>
+      </div>
+    </div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Organisation:</p>
+      </div>
 
-			<div class="data_right">
-				<p><%= scammer.visited_date?new Date(scammer.visited_date).toDateString():"Not Known" %> </p>
-			</div>
-		</div>
-	</div>
+      <div class="data_right">
+        <p><%= scammer.org?scammer.org:"Not Known" %> </p>
+      </div>
+    </div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Visited Date:</p>
+      </div>
 
-	<div class="right">
-		
-		<%if(scammer.device)
+      <div class="data_right">
+        <p><%= scammer.visited_date?new Date(scammer.visited_date).toDateString():"Not Known" %> </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+
+    <%if(scammer.device)
 					{						
 						var vendor=scammer.device.vendor?scammer.device.vendor:"Not Known";
 						var model=scammer.device.model?scammer.device.model:"Not Known";
 						var type=scammer.device.type?scammer.device.type:"Not Known";
 					}%>
-		<div class="scammer_data">
-			<div class="data_left">		
-				<p  class="bold_text" >Vendor:</p>
-			</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Vendor:</p>
+      </div>
 
-			<div class="data_right">
-				<p><%= vendor?vendor:"Not Known" %> </p>
-			</div>
-		</div>
+      <div class="data_right">
+        <p><%= vendor?vendor:"Not Known" %> </p>
+      </div>
+    </div>
 
-		<div class="scammer_data">
-			<div class="data_left">		
-				<p  class="bold_text" >Model:</p>
-			</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Model:</p>
+      </div>
 
-			<div class="data_right">
-				<p><%= model?model:"Not Known" %> </p>
-			</div>
-		</div>
+      <div class="data_right">
+        <p><%= model?model:"Not Known" %> </p>
+      </div>
+    </div>
 
-		<div class="scammer_data">
-			<div class="data_left">		
-				<p  class="bold_text" >Type:</p>
-			</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Type:</p>
+      </div>
 
-			<div class="data_right">
-				<p><%= type?type:"Not Known" %> </p>
-			</div>
-		</div>
+      <div class="data_right">
+        <p><%= type?type:"Not Known" %> </p>
+      </div>
+    </div>
 
-		<div class="scammer_data">
-			<div class="data_left">
-				<p  class="bold_text" >Browser:</p  ><p>
-			</div>
-			<div class="data_right">
-				<p><%= scammer.browser?scammer.browser:"Not Known" %> </p>
-			</div>
-		</div>
-		<div class="scammer_data">
-			<div class="data_left">
-				<p  class="bold_text" >Os:</p  ><p>
-			</div>
-			<div class="data_right">
-				<p><%= scammer.os?scammer.os:"Not Known" %> </p>
-			</div>
-		</div>
-		<div class="scammer_data">
-			<div class="data_left">
-				<p  class="bold_text" >Link:</p  ><p>
-			</div>
-			<div class="data_right">
-				<p><a href="/token/<%= scammer.token%>">Link</a> </p>
-			</div>
-		</div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Browser:</p>
+        <p>
+      </div>
+      <div class="data_right">
+        <p><%= scammer.browser?scammer.browser:"Not Known" %> </p>
+      </div>
+    </div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Os:</p>
+        <p>
+      </div>
+      <div class="data_right">
+        <p><%= scammer.os?scammer.os:"Not Known" %> </p>
+      </div>
+    </div>
+    <div class="scammer_data">
+      <div class="data_left">
+        <p class="bold_text">Link:</p>
+        <p>
+      </div>
+      <div class="data_right">
+        <p><a href="/token/<%= scammer.token%>">Link</a> </p>
+      </div>
+    </div>
 
-	</div>
-	</div>
+  </div>
+</div>
 </div>
 <div class="remove_container">
-	<input type="button" name="remove" class="remove_button <%= scammer._id%>" value="Remove Scammer" onClick="removeVictim(event)">
+  <input type="button" name="remove" class="remove_button <%= scammer._id%>" value="Remove Scammer" onClick="removeVictim(event)">
 </div>
-	

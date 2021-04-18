@@ -1,35 +1,35 @@
 <div class="nav">
-  	<div class="nav-brand">
-  		<img src="/public/img/logo.png" class="logo"/>
-  		<h4>InfoG</h4>
-  	</div>
-    <div class="lines">
-        <div class="smallline"></div>
-        <div class="smallline"></div>
-        <div class="smallline"></div>
+  <div class="nav-brand">
+    <img src="/public/img/logo.png" class="logo" />
+    <h4>InfoG</h4>
+  </div>
+  <div class="lines">
+    <div class="smallline"></div>
+    <div class="smallline"></div>
+    <div class="smallline"></div>
+  </div>
+  <div class="nav_list">
+
+    <div class="crosslines">
+
     </div>
-    <div class="nav_list">
-        
-      <div class="crosslines">
-       
-      </div>
-       <% if(!(typeof user==="undefined")) {%>
-         <div class="nav_link">
-           <a href="/user/profile"> <img src="/public/img/user.svg" class="user_img"></a>
-         </div>
+    <% if(!(typeof user==="undefined")) {%>
+    <div class="nav_link">
+      <a href="/user/profile"> <img src="/public/img/user.svg" class="user_img"></a>
+    </div>
 
-        <div class="nav_link">
-         <a href="/user/dashboard">Dashboard</a>
-        </div>
+    <div class="nav_link">
+      <a href="/user/dashboard">Dashboard</a>
+    </div>
 
-        <div class="nav_link">
-          <a href="/user/logout" >Logout</a>
-        </div>
-        <%}else {%>
-           <div class="nav_link">
-              <a href="/" >Home</a>
-           </div>
-        <%}%>        
+    <div class="nav_link">
+      <a href="/user/logout">Logout</a>
+    </div>
+    <%}else {%>
+    <div class="nav_link">
+      <a href="/">Home</a>
+    </div>
+    <%}%>        
     	
     </div>
   </div>
