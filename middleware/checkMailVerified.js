@@ -1,5 +1,5 @@
 function checkMailVerified(req, res, next) {
-  if (!req.user.is_email_verified) {
+  if (req.user.is_email_verified) {
     next()
     return
   }
