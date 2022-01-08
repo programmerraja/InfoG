@@ -54,6 +54,10 @@ let schema = new mongoose.Schema({
   },
   visited_date: {
     type: Date
+  },
+  cdate:{
+    type:Date,
+    default:new Date()
   }
 });
 

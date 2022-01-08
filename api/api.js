@@ -91,10 +91,8 @@ async function removeVictim(req, res) {
       id
     } = req.body;
     let msg = await scammermodel.deleteOne({
-      _id: id
+      _ids: id
     });
-
-
     //if we sucessfully removed the scammer 
     if (msg.ok) {
       res.json({
